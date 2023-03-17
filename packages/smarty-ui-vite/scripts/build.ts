@@ -33,7 +33,6 @@ const buildAll = async () => {
     return isDir && fs.readdirSync(componentDir).includes("index.ts");
   });
 
-  debugger;
   for (let i = 0; i < targetDir.length; i++) {
     let name = targetDir[i];
     const outDir = path.resolve(config.build.outDir, name);
