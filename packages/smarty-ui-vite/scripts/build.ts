@@ -54,7 +54,7 @@ const buildAll = async () => {
       path.resolve(outDir, `package.json`),
       JSON.stringify(
         {
-          name: `smarty-ui-vite/${name}`,
+          name: `@lisen6/smarty-ui-vite/${name}`,
           main: "index.umd.js",
           module: "index.umd.js",
         },
