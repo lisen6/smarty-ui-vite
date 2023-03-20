@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "smarty-ui-vite": "workspace:*"
+    "@lisen6/smarty-ui-vite": "workspace:*"
   }
 }
