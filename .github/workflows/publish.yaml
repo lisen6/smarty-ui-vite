@@ -2,7 +2,7 @@ name: Public Npm
 
 on:
   push:
-    branches: [ main ]
+    branches: [ publish-smarty-ui-vite ]
 
 
 jobs:
