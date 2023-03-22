@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "module": "./dist/smarty-ui.esm.js",
-  "homepage": "https://smarty-admin.vercel.app/",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "dev": "vite",
     "run:demo": "vite",
@@ -24,6 +27,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@lisen6/smarty-ui-vite": "^0.1.0",
     "@types/fs-extra": "^9.0.13",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
