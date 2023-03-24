@@ -1,6 +1,6 @@
 {
   "name": "@lisen6/smarty-ui-vite",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "module": "./dist/smarty-ui.esm.js",
