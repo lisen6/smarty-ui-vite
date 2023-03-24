@@ -44,8 +44,6 @@ export default defineComponent({
   name: "SButton",
   props,
   setup(props, { slots }) {
-    console.log(props.icon);
-
     const size = {
       small: {
         x: "2",
@@ -64,7 +62,7 @@ export default defineComponent({
       },
     };
 
-    console.log('我是button')
+    console.log("我是button1");
     return () => (
       <button
         class={`
