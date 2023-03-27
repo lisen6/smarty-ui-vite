@@ -43,6 +43,6 @@ Modern browsers and Internet Explorer 10+.
 
 
 ## LICENSE
-[MIT](../../LICENSE)
+[MIT](https://github.com/lisen6/smarty-ui-vite/blob/main/LICENSE)
 
 Copyright (c) 2022 - present Ran (Joseph) Xia

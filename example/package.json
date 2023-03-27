@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lisen6/smarty-ui-vite": "^0.1.0",
+    "@lisen6/smarty-ui-vite": "^0.2.1",
     "vue": "^3.2.41"
   },
   "devDependencies": {

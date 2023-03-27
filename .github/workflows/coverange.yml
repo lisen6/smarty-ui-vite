@@ -24,7 +24,7 @@ jobs:
           version: 7.2.1
       - name: Install modules
         run: pnpm install
-      - name: Run Test Coverage
+      - name: Run Test Coveragehu
         run: cd packages/smarty-ui-vite && pnpm coverage
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
