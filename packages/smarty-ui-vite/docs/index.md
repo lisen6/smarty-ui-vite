@@ -1,6 +1,6 @@
 # 🔨 Smarty-UI是什么?
 
-一个Mini版的组件库，基于Vite栈。为需要学习前端工程化的同学搭建的组件库搭建教学模型。
+一个 Mini 版的组件库，基于 Vite 实践。
 ## Features
 
 - ⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness
@@ -16,35 +16,28 @@
 ## Install
 
 ```bash
-npm i smarty-admin-ui
+npm i @lisen6/smarty-ui-vite
 ```
 
 ## Quick Start
 
 ```js
     import Vue from 'vue'
-    import SmartyUI from 'element-ui'
+    import SmartyUI from '@lisen6/smarty-ui-vite'
+    import "@lisen6/smarty-ui-vite/dist/smarty.css"
 
     const App = {
         template: `
-            <SButton/>
+            <SButton>主要按钮</SButton>
         `,
     };
 
-    createApp(App)
-        .use(SmartyUI)
-        .mount("#app");
-
+    createApp(App).use(SmartyUI).mount('#app')
 ```
 
 ## Browser Support
 
 Modern browsers and Internet Explorer 10+.
 
-## Join Discussion Group
-
-Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
-
-<img alt="Join Discusion Group" src="https://github.com/smarty-team/smarty-admin/blob/main/assets/dingding.jpeg" width="300">
 
 
