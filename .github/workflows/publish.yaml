@@ -1,14 +1,14 @@
-name: Publish Smarty-ui-vite To Npm
+name: Public Npm
 
 on:
   push:
-    branches: [publish-smarty-ui-vite]
+    branches: [publish]
 
 jobs:
   publish:
     runs-on: ubuntu-latest
 
-    name: "Publish npm"
+    name: "publish npm"
 
     environment: npm
 
@@ -16,16 +16,16 @@ jobs:
       - uses: actions/checkout@master
       - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.31.0
+          version: 7.2.1
       - name: Install modules
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Build
-        run: cd packages/smarty-ui-vite && npm run build
+        run: cd packages/smarty-ui-vite && pnpm run build
       - name: "Publish to the npm registry"
         uses: primer/publish@3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         with:
-          default_branch: "publish-smarty-ui-vite"
-          dir: "packages/smarty-ui-vite"
+          default_branch: "publish"
+          dir: "packages/smarty-ui-vite/dist"
