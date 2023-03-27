@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "module": "./dist/smarty-ui.esm.js",
+  "homepage": "https://smarty-ui-app.vercel.app/",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
