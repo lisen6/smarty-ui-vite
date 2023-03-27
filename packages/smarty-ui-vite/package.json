@@ -14,7 +14,7 @@
     "build": "pnpm build:components",
     "build:all": "vite build",
     "build:components": "esno ./scripts/build.ts",
-    "lint": "eslint --fix --ext .ts,.tsx,.vue src",
+    "lint": "lint-staged",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs --config ../vite.config.ts",
     "docs:build": "vitepress build docs --config ../vite.config.ts",
@@ -59,6 +59,7 @@
     "c8": "^7.11.3",
     "happy-dom": "^4.0.0",
     "jsdom": "^19.0.0",
+    "lint-staged": "^13.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "terser": "^5.16.6",
@@ -66,5 +67,10 @@
     "vitepress": "^0.22.4",
     "vitepress-theme-demoblock": "^1.4.2",
     "vitest": "^0.14.0"
+  },
+  "lint-staged": {
+    "*.{vue,ts,tsx,js}": [
+      "eslint --fix"
+    ]
   }
 }
