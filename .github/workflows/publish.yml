@@ -21,11 +21,27 @@ jobs:
         run: pnpm install
       - name: Build
         run: cd packages/smarty-ui-vite && pnpm run build
-      - name: "Publish to the npm registry"
-        uses: primer/publish@3.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      # 这一步是最重要的。使用changesets/action自动创建 PR 或者发布
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
         with:
-          default_branch: "publish"
-          dir: "packages/smarty-ui-vite/dist"
+          # 执行更新版本和发布的命令
+          version: pnpm run version
+          publish: pnpm exec changeset publish
+          commit: '[ci] release'
+          title: '[ci] release'
+        env:
+          # 这里需要几个 Token 变量
+          # GITHUB_TOKEN 是 CI 里自带的默认 token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NPM_TOKEN 需要稍后在 npm 网站生成。
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      # - name: "Publish to the npm registry"
+      #   uses: primer/publish@3.0.0
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      #   with:
+      #     default_branch: "publish"
+      #     dir: "packages/smarty-ui-vite/dist"
