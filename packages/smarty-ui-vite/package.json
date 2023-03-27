@@ -1,6 +1,6 @@
 {
   "name": "@lisen6/smarty-ui-vite",
-  "version": "0.2.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "module": "./dist/smarty-ui.esm.js",
@@ -12,9 +12,10 @@
   "scripts": {
     "dev": "vite",
     "run:demo": "vite",
-    "build": "pnpm build:components",
+    "build": "pnpm run clean && pnpm build:components",
     "build:all": "vite build",
     "build:components": "esno ./scripts/build.ts",
+    "clean": "rm -rf dist",
     "lint": "lint-staged",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "docs:dev": "vitepress dev docs --config ../vite.config.ts",
