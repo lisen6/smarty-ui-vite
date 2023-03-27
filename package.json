@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install"
   },
   "author": "",
   "license": "ISC",
