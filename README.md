@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-<img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/logo.jpeg" style="width:20%;" />
+<img src="https://github.com/lisen6/smarty-ui-vite/blob/main/assets/logo.jpeg" style="width:20%;" />
 </p>
 
 <h1 align="center">Smarty-Admin-UI</h1>
@@ -16,6 +16,7 @@
 
 [![CI](https://github.com/lisen6/smarty-ui-vite/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/lisen6/smarty-ui-vite/actions/workflows/main.yml)
 ![MIT](https://img.shields.io/badge/license-MIT-red)
+[![codecov](https://codecov.io/gh/lisen6/smarty-ui-vite/branch/main/graph/badge.svg?token=ZPDLT4J9CP)](https://codecov.io/gh/lisen6/smarty-ui-vite)
 
 <br>
 <br>
