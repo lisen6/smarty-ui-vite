@@ -62,7 +62,7 @@ export default defineComponent({
       },
     };
 
-    console.log("我是button2");
+    console.log("我是button3");
     return () => (
       <button
         class={`
