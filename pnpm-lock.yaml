@@ -1,42 +1,49 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@changesets/changelog-github': ^0.4.8
-  '@changesets/cli': ^2.26.1
-  '@commitlint/cli': ^17.0.2
-  '@commitlint/config-conventional': ^17.0.2
-  '@typescript-eslint/eslint-plugin': ^5.57.0
-  '@typescript-eslint/parser': ^5.57.0
-  '@vue/eslint-config-prettier': ^7.1.0
-  babel-eslint: ^10.1.0
-  eslint: ^8.36.0
-  eslint-formatter-pretty: ^5.0.0
-  eslint-plugin-json: ^3.1.0
-  eslint-plugin-prettier: ^4.2.1
-  eslint-plugin-vue: ^9.10.0
-  husky: ^7.0.4
-  prettier: ^2.8.7
-  vite: ^3.0.4
+importers:
 
-dependencies:
-  '@changesets/cli': registry.npmmirror.com/@changesets/cli/2.26.1
-  '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.5.0
-  '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.4.4
-  vite: registry.npmmirror.com/vite/3.2.5
+  .:
+    specifiers:
+      '@changesets/changelog-github': ^0.4.8
+      '@changesets/cli': ^2.26.1
+      '@commitlint/cli': ^17.0.2
+      '@commitlint/config-conventional': ^17.0.2
+      '@typescript-eslint/eslint-plugin': ^5.57.0
+      '@typescript-eslint/parser': ^5.57.0
+      '@vue/eslint-config-prettier': ^7.1.0
+      babel-eslint: ^10.1.0
+      eslint: ^8.36.0
+      eslint-formatter-pretty: ^5.0.0
+      eslint-plugin-json: ^3.1.0
+      eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-vue: ^9.10.0
+      husky: ^7.0.4
+      prettier: ^2.8.7
+      vite: ^3.0.4
+    dependencies:
+      '@changesets/cli': registry.npmmirror.com/@changesets/cli/2.26.1
+      '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.5.0
+      '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.4.4
+      vite: registry.npmmirror.com/vite/3.2.5
+    devDependencies:
+      '@changesets/changelog-github': registry.npmmirror.com/@changesets/changelog-github/0.4.8
+      '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.57.0_74llxljztmzze2ez7aakaiqyti
+      '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.57.0_eslint@8.36.0
+      '@vue/eslint-config-prettier': registry.npmmirror.com/@vue/eslint-config-prettier/7.1.0_46eickiazn37rcnqccwnhqcaki
+      babel-eslint: registry.npmmirror.com/babel-eslint/10.1.0_eslint@8.36.0
+      eslint: registry.npmmirror.com/eslint/8.36.0
+      eslint-formatter-pretty: registry.npmmirror.com/eslint-formatter-pretty/5.0.0
+      eslint-plugin-json: registry.npmmirror.com/eslint-plugin-json/3.1.0
+      eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_46eickiazn37rcnqccwnhqcaki
+      eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/9.10.0_eslint@8.36.0
+      husky: registry.npmmirror.com/husky/7.0.4
+      prettier: registry.npmmirror.com/prettier/2.8.7
 
-devDependencies:
-  '@changesets/changelog-github': registry.npmmirror.com/@changesets/changelog-github/0.4.8
-  '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.57.0_74llxljztmzze2ez7aakaiqyti
-  '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.57.0_eslint@8.36.0
-  '@vue/eslint-config-prettier': registry.npmmirror.com/@vue/eslint-config-prettier/7.1.0_46eickiazn37rcnqccwnhqcaki
-  babel-eslint: registry.npmmirror.com/babel-eslint/10.1.0_eslint@8.36.0
-  eslint: registry.npmmirror.com/eslint/8.36.0
-  eslint-formatter-pretty: registry.npmmirror.com/eslint-formatter-pretty/5.0.0
-  eslint-plugin-json: registry.npmmirror.com/eslint-plugin-json/3.1.0
-  eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_46eickiazn37rcnqccwnhqcaki
-  eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/9.10.0_eslint@8.36.0
-  husky: registry.npmmirror.com/husky/7.0.4
-  prettier: registry.npmmirror.com/prettier/2.8.7
+  packages/docs-vite:
+    specifiers:
+      '@lisen6/smarty-ui-vite': workspace:0.1.6
+    dependencies:
+      '@lisen6/smarty-ui-vite': link:../smarty-ui-vite
 
 packages:
 
