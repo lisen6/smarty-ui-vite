@@ -6,9 +6,11 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
+    "changes": "pnpm changeset version --ignore-workspace-root-changes true",
+    "changes:version": "changeset version",
     "build": "pnpm -r run build:pre --ignore-scripts",
-    "version": "changeset version",
-    "prepublishOnly": "pnpm build && changeset publish",
+    "publish:every": "pnpm build && changeset publish",
+    "publish:ui": "pnpm publish packages/smarty-ui-vite",
     "reInstall": "pnpm run clean:node_modules && pnpm recursive install",
     "clean:node_modules": "rm -rf node_modules && pnpm recursive exec -- rm -rf node_modules"
   },

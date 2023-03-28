@@ -62,7 +62,7 @@ export default defineComponent({
       },
     };
 
-    console.log("test ci");
+    console.log("test scripts cmd");
 
     return () => (
       <button
