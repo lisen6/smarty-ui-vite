@@ -1,6 +1,6 @@
 {
-  "name": "docs-vite",
-  "version": "0.0.2",
+  "name": "@lisen6/docs-vite",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
