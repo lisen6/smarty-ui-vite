@@ -15,8 +15,10 @@ jobs:
       - uses: pnpm/action-setup@v2.1.0
         with:
           version: 7.2.1
+      - name: Set registry
+        run: npm config set registry https://registry.npmjs.org/
       - name: Install modules
-        run: cd packages/smarty-ui-vite && pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
       - name: Build 
         run: cd packages/smarty-ui-vite && pnpm build 
       - name: Login to NPM registry
