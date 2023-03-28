@@ -1,5 +1,11 @@
 # @lisen6/smarty-ui-vite
 
+## 0.1.4
+
+### Patch Changes
+
+- add console.log
+
 ## 0.1.3
 
 ### Patch Changes

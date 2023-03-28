@@ -1,5 +1,12 @@
 # docs-vite
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @lisen6/smarty-ui-vite@0.1.4
+
 ## 0.0.3
 
 ### Patch Changes
