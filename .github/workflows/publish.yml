@@ -22,6 +22,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Build 
         run: cd packages/smarty-ui-vite && pnpm build
+      - name: npm auth
+        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
       - name: 'Publish to the npm registry'
         run: cd packages/smarty-ui-vite && npm publish
         env:
