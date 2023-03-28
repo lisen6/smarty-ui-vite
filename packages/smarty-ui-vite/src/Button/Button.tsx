@@ -62,6 +62,8 @@ export default defineComponent({
       },
     };
 
+    console.log("新版本");
+
     return () => (
       <button
         class={`
