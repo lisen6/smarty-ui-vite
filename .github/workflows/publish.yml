@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: https://registry.npmjs.org/
+      - name: Authenticate with NPM
+        run: npm login --registry=https://registry.npmjs.org/ --always-auth --auth-type=oauth --oauth-token=${{ secrets.NPM_AUTH_TOKEN }}
       - name: Install modules
         run: pnpm install --no-frozen-lockfile
       - name: Build 
