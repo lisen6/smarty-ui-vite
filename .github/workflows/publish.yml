@@ -1,32 +1,44 @@
-name: Public Npm
+name: Publish
 
 on:
   push:
-    branches: [ publish ]
-
+    branches:
+      - publish
 
 jobs:
   publish:
     runs-on: ubuntu-latest
 
-    name: 'publish npm'
-
-    environment: npm
+    strategy:
+      matrix:
+        node-version: [16]
 
     steps:
-      - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v2.1.0
+      - name: Checkout Branch
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          version: 7.2.1
-      - name: Install modules
+          version: 7
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
         run: pnpm install
-      - name: Build 
-        run: cd packages/ui && npm run build 
-      - name: 'Publish to the npm registry'
-        uses: primer/publish@3.0.0
+
+      - name: Build Packages
+        run: pnpm run build
+
+      - name: Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
-        with:
-          default_branch: 'publish'
-          dir: "packages/smarty-ui-vite/dist"
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
