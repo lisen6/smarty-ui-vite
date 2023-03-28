@@ -1,5 +1,11 @@
 # @lisen6/smarty-ui-vite
 
+## 0.1.5
+
+### Patch Changes
+
+- feat: button console
+
 ## 0.1.4
 
 ### Patch Changes
