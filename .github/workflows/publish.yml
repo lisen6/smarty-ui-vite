@@ -9,24 +9,19 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     name: 'publish npm'
-    environment: npm
     steps:
-      - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          version: 7.2.1
-      - name: Set registry
-        run: pnpm config set registry https://registry.npmjs.org/
+          node-version: 15
+          registry-url: https://registry.npmjs.org/
       - name: Install modules
         run: pnpm install --no-frozen-lockfile
       - name: Build 
-        run: cd packages/smarty-ui-vite && pnpm build 
-      - name: Login to NPM registry
-        run: echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > .npmrc
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: cd packages/smarty-ui-vite && pnpm build
       - name: 'Publish to the npm registry'
         run: pnpm prepublishOnly
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
