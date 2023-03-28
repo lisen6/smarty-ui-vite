@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@lisen6/smarty-ui-vite': workspace:*
+
+dependencies:
+  '@lisen6/smarty-ui-vite': link:../smarty-ui-vite
