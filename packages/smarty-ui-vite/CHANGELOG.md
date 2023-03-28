@@ -1,5 +1,11 @@
 # @lisen6/smarty-ui-vite
 
+## 0.1.7
+
+### Patch Changes
+
+- feat: test script1
+
 ## 0.1.6
 
 ### Patch Changes

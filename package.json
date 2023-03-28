@@ -10,7 +10,7 @@
     "changes:version": "changeset version",
     "build": "pnpm -r run build:pre --ignore-scripts",
     "publish:every": "pnpm build && changeset publish",
-    "publish:ui": "pnpm publish packages/smarty-ui-vite",
+    "publish:ui": "npm publish packages/smarty-ui-vite",
     "reInstall": "pnpm run clean:node_modules && pnpm recursive install",
     "clean:node_modules": "rm -rf node_modules && pnpm recursive exec -- rm -rf node_modules"
   },
