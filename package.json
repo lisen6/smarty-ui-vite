@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "version": "changeset version",
     "prepublishOnly": "pnpm run version && changeset publish",
-    "bootstrap": "pnpm run clean:node_modules && pnpm recursive install",
+    "reInstall": "pnpm run clean:node_modules && pnpm recursive install",
     "clean:node_modules": "rm -rf node_modules && pnpm recursive exec -- rm -rf node_modules"
   },
   "author": "",
