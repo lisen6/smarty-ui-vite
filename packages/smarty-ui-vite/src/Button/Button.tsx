@@ -62,7 +62,6 @@ export default defineComponent({
       },
     };
 
-    console.log("1010");
     return () => (
       <button
         class={`
@@ -82,7 +81,7 @@ export default defineComponent({
           `}
       >
         {props.icon !== "" ? (
-          <i class={`i-ic-baseline-${props.icon} p-3`}></i>
+          <i className={`i-ic-baseline-${props.icon} p-3`}></i>
         ) : (
           ""
         )}

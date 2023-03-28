@@ -21,5 +21,3 @@ createApp({
 })
   .use(SmartyUI)
   .mount("#app");
-
-console.log(2);
