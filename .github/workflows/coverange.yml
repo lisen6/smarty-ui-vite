@@ -23,9 +23,7 @@ jobs:
         with:
           version: 7.2.1
       - name: Install modules
-        run: | 
-          pnpm install
-          cd packages/smarty-ui-vite && pnpm install
+        run: cd packages/smarty-ui-vite && pnpm install --frozen-lockfile
       - name: Run Test Coveragehu
         run: cd packages/smarty-ui-vite && pnpm coverage
       - name: Upload coverage to Codecov
