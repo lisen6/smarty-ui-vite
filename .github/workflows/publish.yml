@@ -29,10 +29,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Install Dependencies
-        run: pnpm install
+        run: cd packages/smarty-ui-vite && pnpm install
 
       - name: Build Packages
-        run: pnpm run build
+        run: cd packages/smarty-ui-vite && pnpm run build
 
       - name: Publish to npm
         id: changesets
