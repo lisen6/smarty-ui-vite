@@ -62,7 +62,7 @@ export default defineComponent({
       },
     };
 
-    console.log("新版本");
+    console.log("new version");
 
     return () => (
       <button
