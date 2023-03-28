@@ -1,5 +1,11 @@
 # @lisen6/smarty-ui-vite
 
+## 0.1.6
+
+### Patch Changes
+
+- update content to test ci
+
 ## 0.1.5
 
 ### Patch Changes
