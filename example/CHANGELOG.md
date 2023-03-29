@@ -1,5 +1,12 @@
 # example
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @lisen6/smarty-ui-vite@0.1.8
+
 ## 0.0.5
 
 ### Patch Changes

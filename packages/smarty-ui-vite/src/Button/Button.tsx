@@ -62,7 +62,7 @@ export default defineComponent({
       },
     };
 
-    console.log("test script1");
+    console.log("test auto publish");
 
     return () => (
       <button
