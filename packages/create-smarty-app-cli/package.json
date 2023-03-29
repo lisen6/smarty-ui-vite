@@ -1,9 +1,13 @@
 {
-  "name": "@lisen/create-smarty-app",
-  "version": "1.0.0",
+  "name": "@lisen6/create-smarty-app",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "bin": {
     "create-smarty": "./bin/index.js"
   },
