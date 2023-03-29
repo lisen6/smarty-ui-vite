@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
@@ -10,7 +11,7 @@
     "changes:version": "changeset version",
     "build": "pnpm -r run build:pre --ignore-scripts",
     "publish:every": "pnpm build && changeset publish",
-    "publish:ui": "npm publish packages/smarty-ui-vite",
+    "publish:ui": "cd packages/smarty-ui-vite && npm publish",
     "reInstall": "pnpm run clean:node_modules && pnpm recursive install",
     "clean:node_modules": "rm -rf node_modules && pnpm recursive exec -- rm -rf node_modules"
   },
